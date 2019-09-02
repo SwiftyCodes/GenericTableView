@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZT-Hl-W36">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MusicVC-->
+        <scene sceneID="Gdy-Pt-At6">
+            <objects>
+                <viewController storyboardIdentifier="MusicVC" id="vZT-Hl-W36" customClass="MusicVC" customModule="GenericTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYk-FQ-wms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-7P-ieG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicTableViewCell" rowHeight="80" id="cJr-6D-vbl" customClass="MusicTableViewCell" customModule="GenericTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJr-6D-vbl" id="iUI-2g-5r5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwh-yh-LEa">
+                                                    <rect key="frame" x="15" y="6" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="Txj-Pj-QxQ"/>
+                                                        <constraint firstAttribute="width" constant="70" id="bHo-d2-VfQ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-kF-E7L">
+                                                    <rect key="frame" x="93" y="11" width="267" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-3G-TOo">
+                                                    <rect key="frame" x="93" y="37" width="267" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eTe-kF-E7L" firstAttribute="leading" secondItem="gwh-yh-LEa" secondAttribute="trailing" constant="8" id="0Gs-da-i0N"/>
+                                                <constraint firstItem="qHH-3G-TOo" firstAttribute="top" secondItem="eTe-kF-E7L" secondAttribute="bottom" constant="8" id="23q-Ak-vme"/>
+                                                <constraint firstItem="eTe-kF-E7L" firstAttribute="top" secondItem="iUI-2g-5r5" secondAttribute="topMargin" id="VzJ-41-Rle"/>
+                                                <constraint firstItem="qHH-3G-TOo" firstAttribute="leading" secondItem="gwh-yh-LEa" secondAttribute="trailing" constant="8" id="bMx-pB-nHg"/>
+                                                <constraint firstAttribute="trailing" secondItem="eTe-kF-E7L" secondAttribute="trailing" constant="15" id="dsp-TR-s60"/>
+                                                <constraint firstItem="gwh-yh-LEa" firstAttribute="top" secondItem="iUI-2g-5r5" secondAttribute="top" constant="6" id="nsD-sD-llR"/>
+                                                <constraint firstItem="gwh-yh-LEa" firstAttribute="leading" secondItem="iUI-2g-5r5" secondAttribute="leading" constant="15" id="rpm-ZQ-owj"/>
+                                                <constraint firstAttribute="trailing" secondItem="qHH-3G-TOo" secondAttribute="trailing" constant="15" id="zaw-c1-1ir"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistName" destination="eTe-kF-E7L" id="cYy-4r-tN2"/>
+                                            <outlet property="musicImageView" destination="gwh-yh-LEa" id="bx7-Gx-vst"/>
+                                            <outlet property="trackName" destination="qHH-3G-TOo" id="n7C-D1-HQa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JUD-7u-530" firstAttribute="bottom" secondItem="2ju-7P-ieG" secondAttribute="bottom" id="Grw-zw-kQf"/>
+                            <constraint firstItem="2ju-7P-ieG" firstAttribute="leading" secondItem="JUD-7u-530" secondAttribute="leading" id="Xzu-9T-YZv"/>
+                            <constraint firstItem="2ju-7P-ieG" firstAttribute="top" secondItem="JUD-7u-530" secondAttribute="top" id="aIM-Y9-qDp"/>
+                            <constraint firstAttribute="trailing" secondItem="2ju-7P-ieG" secondAttribute="trailing" id="djm-PH-fpI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JUD-7u-530"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2ju-7P-ieG" id="uOA-7h-rL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBS-3N-eIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-967" y="-385"/>
+        </scene>
+    </scenes>
+</document>
